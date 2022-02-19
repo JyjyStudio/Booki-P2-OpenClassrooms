@@ -6,6 +6,9 @@
 body {
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
+.container {
+    margin-left: 5%;
+}
 #logo-mobile {
     display: none;
 }
@@ -13,31 +16,81 @@ a {
     text-decoration: none;
     color: #000;
 }
-/* Header */
+
+/******************* Header *******************/
+header {
+    margin-bottom: 2em;
+}
 header, nav {
     display: flex;
     justify-content: space-between;
 }
 nav>div>a {
     display: block;
-    padding: 70px;
-    font-size: 1.7em;
+    padding: 40px 50px;
+    font-size: 1.2em;
 }
 #logo-desktop {
-    padding: 50px 30px 0;
+    padding: 20px 0 0 30px;
 }
 nav>div>a:hover {
     color: #0065FC;
     border-top : #0065FC solid;
 }
 
-/* Media queries */
+/******************* Search Form *******************/
+#search>* {
+    margin-bottom: 20px;
+}
+#searchIcon {
+    display: inline;
+    width: 40px;
+    background-color: #F2F2F2;
+    padding: 15px;
+    border-radius: 15px 0 0 15px;
+}
+#searchInput {
+    outline: none;
+    height: 49px;
+    width: 300px;
+    border: 1px solid #F2F2F2;
+    padding-left: 1em;  
+    font-size: 1em;
+    font-weight: 700;
+}
+#searchInput::placeholder {
+    color: #000;
+}
+#searchBtn {
+    height: 49px;
+    padding: 0 20px;
+    font-weight: 700;
+    color: #fff;
+    background: #0065FC;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    transform: translateX(-5px);
+    cursor: pointer;
+}
+#searchBtnMobile {
+    display: none;
+}
+/******************** Filters *******************/
 
-/* Mobiles (en dessous de 768px) */
+
+
+
+/******************************************************************************/
+/******************************* Media queries *******************************/
+/******************************************************************************/
+
+/********* Mobiles (en dessous de 768px) ***********/
+
 @media screen and (max-width: 768px) {
-    body {
-        background: pink;
+    .container {
+        margin: 0;
     }
+    /********** Header **********/
     #logo-desktop {
         display: none;
     }
@@ -65,26 +118,76 @@ nav>div>a:hover {
         margin-bottom: -5px;
         border-bottom: #0065FC 5px solid;
     }
+    /********* Search Form *********/
+    #search {
+        text-align: center;
+        margin : 0 20px;
+    }
+    #searchInput::placeholder {
+        font-size: .8em;
+    }
+    #searchInput {
+        height: 50px;
+        width: 65%;
+    }
+    #searchBtn {
+        display: none;
+    }
+    #searchBtnMobile {
+    display: inline;
+    height: 50px;
+    padding: 0 18px;
+    font-weight: 700;
+    color: #fff;
+    background: #0065FC;
+    border: none;
+    border-radius: 15px;
+    transform: translateX(-15px);
+    cursor: pointer;
+    }
 }
 
-/* Tablettes (entre 768px et 992px) */ 
+/*********** Tablettes (entre 768px et 992px) *************/ 
 @media screen and (min-width: 768px) and (max-width: 992px) {
     body {
             background: rgb(240, 253, 167);
-        }
+    }
+    /********* Search Form *********/
+    #searchInput {
+        width: 300px;
+    }
+    #searchBtn {
+        height: 48px;
+    }
+
 }
 
-/* En dessous de 380px */
-@media screen and (max-width: 380px) {
+/* En dessous de 300px */
+@media screen and (max-width: 300px) {
     body {
-        background: rgb(240, 81, 107);
+        background: rgb(247, 182, 193);
     }
+    /* Header */
     nav {
         display: block;
         border-bottom: 0;
     }
     nav>div {
-        border-bottom: #F2F2F2 5px solid;
+        border-bottom: #F2F2F2 3px solid;
         width: 100%;
+    }
+    nav>div>a:hover {
+        border-top : none;
+        margin-bottom: -3px;
+        border-bottom: #0065FC 3px solid;
+    }
+    /* Search Form */
+    #search {
+        margin: 0;
+    }
+    #searchInput {
+        height: 49px;
+        width: 55%;
+        border: #f2f2f2 1px solid;
     }
 }
