@@ -3,14 +3,88 @@
     margin: 0;
     padding: 0;
 }
-
 body {
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
-    background-color: pink;
 }
-h1 {
-    text-align: center;
-    font-family: 'Russo one', sans-serif;
-    margin: 1em auto;
-    letter-spacing: 3px;
+#logo-mobile {
+    display: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+/* Header */
+header, nav {
+    display: flex;
+    justify-content: space-between;
+}
+nav>div>a {
+    display: block;
+    padding: 70px;
+    font-size: 1.7em;
+}
+#logo-desktop {
+    padding: 50px 30px 0;
+}
+nav>div>a:hover {
+    color: #0065FC;
+    border-top : #0065FC solid;
+}
+
+/* Media queries */
+
+/* Mobiles (en dessous de 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        background: pink;
+    }
+    #logo-desktop {
+        display: none;
+    }
+    #logo-mobile {
+        display: block;
+    }
+    header {
+        flex-direction: column;
+    }
+    #logo-mobile {
+        text-align: center;
+    }
+    nav {
+        border-bottom: #F2F2F2 5px solid;
+    }
+    nav>div {
+        width: 50%;
+        text-align: center;
+    }
+    nav>div>a {
+        padding: 20px 0;
+    }
+    nav>div>a:hover {
+        border-top : none;
+        margin-bottom: -5px;
+        border-bottom: #0065FC 5px solid;
+    }
+}
+
+/* Tablettes (entre 768px et 992px) */ 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+            background: rgb(240, 253, 167);
+        }
+}
+
+/* En dessous de 380px */
+@media screen and (max-width: 380px) {
+    body {
+        background: rgb(240, 81, 107);
+    }
+    nav {
+        display: block;
+        border-bottom: 0;
+    }
+    nav>div {
+        border-bottom: #F2F2F2 5px solid;
+        width: 100%;
+    }
 }
