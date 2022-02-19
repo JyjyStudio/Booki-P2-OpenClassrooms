@@ -9,9 +9,6 @@ body {
 .container {
     margin-left: 5%;
 }
-#logo-mobile {
-    display: none;
-}
 a {
     text-decoration: none;
     color: #000;
@@ -30,7 +27,7 @@ nav>div>a {
     padding: 40px 50px;
     font-size: 1.2em;
 }
-#logo-desktop {
+#logo {
     padding: 20px 0 0 30px;
 }
 nav>div>a:hover {
@@ -76,6 +73,48 @@ nav>div>a:hover {
     display: none;
 }
 /******************** Filters *******************/
+#filtres {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    font-weight: 700;
+}
+.filtre {
+    margin: 0 25px 15px;
+    cursor: pointer;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+}
+.filtreTitle {
+    cursor: unset;
+    border: none;
+    padding: 10px 0;
+    margin: 0;
+}
+.icon {
+    display: inline-block;
+    color: #0065FC;
+    background: #DEEBFF;
+    padding: 10px 13px;
+    border-radius: 20px;
+    transform: translateX(-9px);
+}
+.textFilter {
+    padding-right: 15px;
+}
+.infos {
+    display: flex;
+}
+.infoIcon {
+    color: #0065FC;
+    padding: 2px 8px;
+    border : #F2F2F2 2px solid;
+    border-radius: 15px;
+}
+.textInfo {
+    margin-left: 10px;
+    line-height: 26px;
+}
 
 
 
@@ -84,24 +123,63 @@ nav>div>a:hover {
 /******************************* Media queries *******************************/
 /******************************************************************************/
 
-/********* Mobiles (en dessous de 768px) ***********/
+/*********** Tablettes (entre 768px et 992px) *************/ 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    /********* Search Form *********/
+    #searchInput {
+        width: 300px;
+    }
+    #searchBtn {
+        height: 48px;
+    }
+    .filtre {
+        margin: 0 25px 15px 0;
+    }
+    .filtreTitle {
+        width: 100%;
+        padding: 0;
+    }
+}
 
-@media screen and (max-width: 768px) {
+/*********** Tablettes entre 555px et 768px (iPad Mini) *************/ 
+@media screen and (min-width: 555px) and (max-width: 768px) {
+    #searchInput {
+        width: 65%;
+    }
+    .filtreTitle {
+        width: 100%;
+    }
+    .filtre {
+        margin: 0 30px 10px 0;
+    }
+}
+
+/*********** Mobiles entre 541px et 555px (Surface Duo) *************/ 
+@media screen and (min-width: 541px) and (max-width: 555px) {
+    #searchInput {
+        width: 65%;
+    }
+    .filtreTitle {
+        width: 100%;
+    }
+    .filtre {
+        margin: 0 25px 15px 0;
+    }
+}
+
+/********* Mobiles (en dessous de 555px) ***********/
+
+@media screen and (max-width: 540px) {
     .container {
         margin: 0;
     }
     /********** Header **********/
-    #logo-desktop {
-        display: none;
-    }
-    #logo-mobile {
-        display: block;
-    }
     header {
         flex-direction: column;
     }
-    #logo-mobile {
+    #logo {
         text-align: center;
+        margin-left: 50px;
     }
     nav {
         border-bottom: #F2F2F2 5px solid;
@@ -119,9 +197,13 @@ nav>div>a:hover {
         border-bottom: #0065FC 5px solid;
     }
     /********* Search Form *********/
+    #search h2, #search p {
+        margin-left: 20px;
+        text-align: left;
+    }
     #search {
         text-align: center;
-        margin : 0 20px;
+        /* margin : 0 20px; */
     }
     #searchInput::placeholder {
         font-size: .8em;
@@ -135,8 +217,8 @@ nav>div>a:hover {
     }
     #searchBtnMobile {
     display: inline;
-    height: 50px;
-    padding: 0 18px;
+    height: 49px;
+    padding: 0 17px;
     font-weight: 700;
     color: #fff;
     background: #0065FC;
@@ -145,28 +227,25 @@ nav>div>a:hover {
     transform: translateX(-15px);
     cursor: pointer;
     }
+    /********* Filters *********/
+    .filtreTitle {
+        width: 100%;
+        margin-left: 25px;
+    }
+    .infos {
+        margin: 0 20px 20px 20px;
+    } 
+    .infoIcon {
+        padding: 1px 15px;
+        border-radius: 20px;
+        line-height: 2;
+        height: 40px;
+    }
 }
 
-/*********** Tablettes (entre 768px et 992px) *************/ 
-@media screen and (min-width: 768px) and (max-width: 992px) {
-    body {
-            background: rgb(240, 253, 167);
-    }
-    /********* Search Form *********/
-    #searchInput {
-        width: 300px;
-    }
-    #searchBtn {
-        height: 48px;
-    }
 
-}
-
-/* En dessous de 300px */
+/* En dessous de 300px (Galaxy Fold) */
 @media screen and (max-width: 300px) {
-    body {
-        background: rgb(247, 182, 193);
-    }
     /* Header */
     nav {
         display: block;
@@ -189,5 +268,8 @@ nav>div>a:hover {
         height: 49px;
         width: 55%;
         border: #f2f2f2 1px solid;
+    }
+    #searchIcon {
+        margin-left: 10px;
     }
 }
