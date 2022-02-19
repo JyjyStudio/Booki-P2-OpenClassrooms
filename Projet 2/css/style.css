@@ -217,6 +217,40 @@ aside {
     text-decoration : underline;
 }
 
+/******************** Section Activités Marseille *******************/
+.section-activites h3 {
+    width: 100%;
+    padding: 30px;
+    margin-top: 20px;
+}
+.section-activites {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card1 img{
+    width: 250px;
+    height: 485px;
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;
+}
+.card2 img{
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;
+}
+.card1, .card2 {
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 25px;
+    box-shadow: 0 0 5px rgb(160, 160, 160);
+    margin-bottom: 30px;
+}
+.card1:hover, .card2:hover {
+    box-shadow: 0 0 15px rgb(95, 95, 95);
+}
 
 
 /******************************************************************************/
