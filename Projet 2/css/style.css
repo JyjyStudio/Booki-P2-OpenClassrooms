@@ -139,17 +139,17 @@ nav>div>a:hover {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.section-hebergements h3, aside h3 {
+#section-hebergements h3, aside h3 {
     width: 90%;
 }
-.section-hebergements, aside {
+#section-hebergements, aside {
     padding: 30px;
     margin-top: 20px;
     background: #f2f2f2;
     border-radius: 20px;
     height: 100%;
 }
-.section-hebergements {
+#section-hebergements {
     flex: 3;
     display: flex;
     flex-wrap: wrap;
@@ -218,12 +218,12 @@ aside {
 }
 
 /******************** Section Activités Marseille *******************/
-.section-activites h3 {
+#section-activites h3 {
     width: 100%;
     padding: 30px;
     margin-top: 20px;
 }
-.section-activites {
+#section-activites {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -250,6 +250,31 @@ aside {
 }
 .card1:hover, .card2:hover {
     box-shadow: 0 0 15px rgb(95, 95, 95);
+}
+
+/******************** Footer *******************/
+footer {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    background: #F2F2F2;
+    padding: 30px 50px;
+    margin: 50px 0;
+}
+footer ul {
+    list-style-type: none;
+    cursor: pointer;
+    margin-right: 20%;
+}
+footer ul li:first-child {
+    font-weight: 700;
+    margin: 20px 0;
+}
+footer ul li {
+    margin: 10px 0;
+}
+footer ul li:hover {
+    text-decoration: underline;
 }
 
 
