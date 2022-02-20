@@ -367,6 +367,11 @@ footer ul li:hover {
     footer {
         margin-bottom: 0;
     }
+    footer  {
+        margin-bottom: 0;
+        font-size: 20px;
+        /* display: block; */
+    }
 }
 
 /*********** Tablettes entre 555px et 768px (iPad Mini) *************/ 
@@ -422,6 +427,7 @@ footer ul li:hover {
         font-size: 20px;
         flex-direction: column;
         margin-bottom: 0;
+        display: block;
     }
 }
 
@@ -576,6 +582,7 @@ footer ul li:hover {
     footer  {
         margin-bottom: 0;
         font-size: 20px;
+        display: block;
     }
 }
 
