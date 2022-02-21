@@ -156,6 +156,9 @@ nav>div>a:hover {
     flex-wrap: wrap;
     margin-right: 30px;
 }
+.card {
+    height: 320px;
+}
 .card img {
     /* margin: 30px 0; */
     width: 250px;
@@ -180,6 +183,7 @@ aside {
 }
 .card-pop {
     display: flex;
+    height: 210px;
     width: 350px;
     margin: 27px 0;
 }
@@ -230,7 +234,7 @@ aside {
 }
 #section-activites {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin-right: 70px;
 }
@@ -265,7 +269,7 @@ footer {
     flex-wrap: wrap;
     background: #F2F2F2;
     padding: 30px 50px;
-    margin: 50px 0;
+    margin-top: 50px;
 }
 footer ul {
     list-style-type: none;
@@ -282,14 +286,24 @@ footer ul li {
 footer ul li:hover {
     text-decoration: underline;
 }
-
-
-/******************************************************************************/
+.hebergements {
+    height: 100%;
+}
+#section-hebergements, aside {
+    min-height: 1000px;
+}
+/*****************************************************************************/
 /******************************* Media queries *******************************/
-/******************************************************************************/
+/*****************************************************************************/
 
+/* Ajustement pour avoir les sections hebergements et + populaires de la meme taille */
+@media screen and (min-width: 1034px) and (max-width: 14270px)  {
+    #section-hebergements, aside {
+        min-height: 1150px;
+    }
+}
 /* Ecrans de plus de 1024px  (1170px?) */
-@media screen and (min-width: 1024px)  {
+@media screen and (min-width: 1034px) and (max-width: 1170px)  {
     .card-pop img {
         height: 180px;
         width: 50%;
@@ -305,15 +319,12 @@ footer ul li:hover {
     .card img {
         width: 100%;
     }
-    #section-hebergements, aside {
-        height: 1100px;
-    }
-    footer {
-        margin-bottom: 0;
-    }
 }
-/*********** Media queries pour arranger la section Activités *************/ 
-@media screen and (min-width: 993px) and (max-width: 1024px)  {
+/*********** Reglages de la section Activités *************/ 
+@media screen and (min-width: 993px) and (max-width: 1034px)  {
+    .hebergements, aside, #section-hebergements {
+        min-height: auto;
+    }
     #section-hebergements {
         flex: inherit;
     }
@@ -321,11 +332,8 @@ footer ul li:hover {
         margin-right: 30px;
         justify-content: space-between;
     }
-    footer {
-        margin-bottom: 0;
-    }
 }
-
+/*********** Reglages de la section activités **************/
 @media screen and (min-width: 993px) and (max-width: 1400px) {
     .column1 {
         width: 50%;
@@ -334,8 +342,8 @@ footer ul li:hover {
         width: 100%;
     }
 }
-/*********** Tablettes (entre 768px et 992px) *************/ 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+/*********** Ecrans entre 767px et 992px *************/ 
+@media screen and (min-width: 767px) and (max-width: 992px) {
     /********* Search Form *********/
     #searchInput {
         width: 300px;
@@ -349,6 +357,9 @@ footer ul li:hover {
     .filtreTitle {
         width: 100%;
         padding: 0;
+    }
+    .hebergements {
+        height: auto;
     }
     #section-hebergements {
         flex: auto;
@@ -378,10 +389,7 @@ footer ul li:hover {
         width: 100%;
     }
     #section-activites {
-        margin-right : 0;
-    }
-    footer {
-        margin-bottom: 0;
+        margin-right : 30px;
     }
     footer  {
         margin-bottom: 0;
@@ -390,79 +398,9 @@ footer ul li:hover {
     }
 }
 
-/*********** Tablettes entre 555px et 768px (iPad Mini) *************/ 
-@media screen and (min-width: 555px) and (max-width: 768px) {
-    #searchInput {
-        width: 65%;
-    }
-    .filtreTitle {
-        width: 100%;
-    }
-    .filtre {
-        margin: 0 30px 10px 0;
-    }
-    aside {
-    margin-right: 35px;
-    }
-    .card, .card-pop, .card img {
-        width: 100%;
-    }
-     .card-pop img {
-        width: 60%;
-        height: 300px;
-    }
-    #section-hebergements .fullStar, #section-hebergements .emptyStar{
-        margin: 0;
-    }
-    #section-hebergements {
-        flex: auto;
-    }
-    .cardContent {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    /* Section Activités */
-    #section-activites {
-        margin-right : 20px;
-    }
-    #section-activites h3 {
-        padding: 0 20px;
-        font-size: 25px;
-    }
-    .card1 img, .card2 img {
-        width: 100%;
-        height: 180px;
-    }
-    .column1, .column2 {
-        width: 95%;
-    }
-    /*** Footer ***/
-    footer  {
-        margin-bottom: 0;
-        font-size: 20px;
-        flex-direction: column;
-        margin-bottom: 0;
-        display: block;
-    }
-}
+/********* Ecrans en dessous de 767px ***********/
 
-/*********** Mobiles entre 541px et 555px (Surface Duo) *************/ 
-@media screen and (min-width: 541px) and (max-width: 555px) {
-    #searchInput {
-        width: 65%;
-    }
-    .filtreTitle {
-        width: 100%;
-    }
-    .filtre {
-        margin: 0 25px 15px 0;
-    }
-}
-
-/********* Mobiles (en dessous de 555px) ***********/
-
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 767px) {
     main {
         margin: 0;
     }
@@ -496,7 +434,7 @@ footer ul li:hover {
     }
     #search {
         text-align: center;
-        /* margin : 0 20px; */
+    /* margin : 0 20px; */
     }
     #searchInput::placeholder {
         font-size: .8em;
@@ -537,6 +475,7 @@ footer ul li:hover {
     /*** Section Hebergements ***/
     .hebergements {
         flex-direction: column-reverse;
+        height: inherit;
     }
     aside {
         border-radius: 0;
@@ -545,9 +484,14 @@ footer ul li:hover {
         padding: 10px;
     }
     #section-hebergements {
+        margin : 0 auto;
+        padding: 10px;
+        background: #fff;
+    }
+    #section-activites {
         background: none;
         margin : 0;
-        padding: 10px;
+        padding: 0 10px;
     }
     #section-hebergements .fullStar, #section-hebergements .emptyStar{
         margin: 0;
@@ -573,7 +517,7 @@ footer ul li:hover {
         margin: 10px auto;
     }
     .card-pop img {
-        height: 100%;
+        height: 200px;
     }
     .see-more {
         font-size: 19px;
@@ -592,7 +536,7 @@ footer ul li:hover {
         height: 180px;
     }
     .column1, .column2 {
-        width: 95%;
+        width: 100%;
     }
     /*** Footer ***/
     footer  {
