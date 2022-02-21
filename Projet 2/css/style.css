@@ -317,6 +317,13 @@ footer ul li:hover {
     #section-hebergements {
         flex: inherit;
     }
+    aside {
+        margin-right: 30px;
+        justify-content: space-between;
+    }
+    footer {
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (min-width: 993px) and (max-width: 1400px) {
@@ -355,7 +362,10 @@ footer ul li:hover {
     .card-pop {
         width: 100%;
     }
-    .card img, .card-pop img {
+    .card-pop img {
+            width: 50%;
+    }
+    .card img {
         width: 100%;
     }
     #section-hebergements .fullStar, #section-hebergements .emptyStar{
