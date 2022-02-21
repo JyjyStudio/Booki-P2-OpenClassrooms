@@ -28,7 +28,8 @@ nav>div>a {
     font-size: 1.2em;
 }
 #logo {
-    padding: 20px 0 0 30px;
+    margin-left: 5%;
+    padding-top:  20px;
 }
 nav>div>a:hover {
     color: #0065FC;
@@ -312,6 +313,11 @@ footer ul li:hover {
     }
 }
 /*********** Media queries pour arranger la section Activités *************/ 
+@media screen and (min-width: 993px) and (max-width: 1024px)  {
+    #section-hebergements {
+        flex: inherit;
+    }
+}
 
 @media screen and (min-width: 993px) and (max-width: 1400px) {
     .column1 {
@@ -591,8 +597,8 @@ footer ul li:hover {
 @media screen and (max-width: 300px) {
     /* Header */
     nav {
-        display: block;
         border-bottom: 0;
+        font-size: 14px;
     }
     nav>div {
         border-bottom: #F2F2F2 3px solid;
