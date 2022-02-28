@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
@@ -60,7 +63,7 @@ nav>div>a:hover {
     color: #000;
 }
 #searchBtn {
-    height: 49px;
+    height: 50px;
     padding: 0 20px;
     font-weight: 700;
     color: #fff;
@@ -84,7 +87,7 @@ nav>div>a:hover {
     margin: 0 25px 15px;
     cursor: pointer;
     border: 1px solid #f2f2f2;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 .filtreTitle {
     cursor: unset;
