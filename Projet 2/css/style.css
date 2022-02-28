@@ -58,6 +58,7 @@ nav>div>a:hover {
     padding-left: 1em;  
     font-size: 1em;
     font-weight: 700;
+    border-radius: 0;
 }
 #searchInput::placeholder {
     color: #000;
