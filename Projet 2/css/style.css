@@ -621,6 +621,7 @@
         margin: 0 auto;
         width: 100%;
         padding: 10px;
+        align-content: space-around;
     }
     #section-hebergements {
         margin : 0 auto;
