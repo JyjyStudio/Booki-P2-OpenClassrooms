@@ -590,8 +590,7 @@
     background: #0065FC;
     border: none;
     border-radius: 15px;
-    position: absolute;
-    right: 10%;
+    transform: translateX(-20px);
     cursor: pointer;
     }
     /********* Filters *********/
